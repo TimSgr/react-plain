@@ -1,8 +1,9 @@
 //import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col sm:flex-row justify-center items-center self-center justify-self-center font-[family-name:var(--font-geist-sans)]">
+    <div className="w-full flex flex-col sm:flex-column justify-center items-center self-center justify-self-center font-[family-name:var(--font-geist-sans)]">
       <header className="flex flex-row justify-between w-full px-8 py-2 align-center items-center">
         <div>
           Logo
@@ -14,11 +15,11 @@ export default function Home() {
                 Test1
               </li>
             </a>
-            <a className="hover:underline" href="#">
-              <li>
+            <Link href="/projects">
+            <li>
                 Test2
               </li>
-            </a>
+            </Link>
           </ul>
         </div>
         <div>
