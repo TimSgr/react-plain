@@ -22,5 +22,8 @@ export default {
       },
     },
   },
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true
+  },
   plugins: [],
 } satisfies Config;

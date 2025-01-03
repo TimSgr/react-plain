@@ -1,0 +1,13 @@
+.single_box {
+    transition: all 0.6s ease;
+}
+.single_box.expanded {
+    background-color: #f0f0f0;
+}
+.more_content {
+    display: none;
+}
+.single_box.expanded .more_content {
+    display: flex;
+}
+  
