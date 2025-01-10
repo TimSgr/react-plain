@@ -1,5 +1,8 @@
 //import Image from "next/image";
 import Link from 'next/link'
+import PrimaryButton from '../components/primaryButton';
+import SecondaryButton from '../components/secondaryButton';
+
 
 export default function Home() {
   return (
@@ -23,17 +26,26 @@ export default function Home() {
           </ul>
         </div>
         <div>
-          <button className="bg-blue text-white p-2 rounded-md hover:bg-darkblue">
-            Testing
-          </button>
         </div>
       </header>
+
       <div className="flex flex-col sm:flex-row justify-center items-center">
         <div className="flex justify-center">
           01
         </div>
         <div className="flex justify-center">
           02
+        </div>
+      </div>
+
+      <div className='flex flex-col w-full justify-center'>
+        <div className='flex w-full justify-center bg-darkpurple'>
+          <PrimaryButton text="Mehr erfahren" link="https://google.com">
+          </PrimaryButton>
+        </div>
+        <div className='flex w-full justify-center bg-lightblue'>
+          <SecondaryButton text="Mehr erfahren" link="https://google.com">
+          </SecondaryButton>
         </div>
       </div>
       <footer>

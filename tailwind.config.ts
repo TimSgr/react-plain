@@ -5,6 +5,9 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/*.{js,ts,jsx,tsx,mdx}",
+
   ],
   theme: {
     extend: {
@@ -19,6 +22,7 @@ export default {
         text: "#182825",
         blue: "#3D3B8E",
         darkblue: "#24234C",
+        lightblue: "#9AC2F6", 
       },
     },
   },
