@@ -9,9 +9,13 @@
   --error: #EF2D56;
   --white: #FFFFFF;
   --success: #7BD389;
-  --warning: #FFFC31;
+  --warning: #DEDC4B;
   --text: #182825;
   --lightblue: #9AC2F6;
+  --charcoal: #2E5266;
+  --slategray: #6E8898;
+  --cadetgray: #9FB1BC; 
+  --newtext: #C0D5F6;
 }
 
 @media (prefers-color-scheme: dark) {

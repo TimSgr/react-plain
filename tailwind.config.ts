@@ -23,7 +23,9 @@ export default {
         blue: "#3D3B8E",
         darkblue: "#24234C",
         lightblue: "#9AC2F6", 
-      },
+        newtext: "#F6F8FD",
+        newtext2: "#EDF0FB",
+      },  
     },
   },
   "compilerOptions": {

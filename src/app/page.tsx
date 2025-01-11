@@ -2,7 +2,8 @@
 import Link from 'next/link'
 import PrimaryButton from '../components/primaryButton';
 import SecondaryButton from '../components/secondaryButton';
-
+import SendButton from '../components/sendButton';
+import ContactForm from '../components/contactForm';
 
 export default function Home() {
   return (
@@ -39,7 +40,15 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col w-full justify-center'>
-        <div className='flex w-full justify-center bg-darkpurple'>
+        <div className='flex w-full flex-col justify-center bg-darkpurple content-center items-center py-8 gap-10'>
+          <div className="text_block text-newtext2 text-center	w-3/4 text-xl	">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+            ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, s
+            ed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </div>
           <PrimaryButton text="Mehr erfahren" link="https://google.com">
           </PrimaryButton>
         </div>
@@ -47,6 +56,15 @@ export default function Home() {
           <SecondaryButton text="Mehr erfahren" link="https://google.com">
           </SecondaryButton>
         </div>
+        <div className='flex w-full justify-center bg-lightblue'>
+          <SendButton text="Mehr erfahren" link="https://google.com">
+          </SendButton>
+        </div>
+        <div className='flex py-8 w-full justify-center bg-lightblue'>
+          <ContactForm text="Mehr erfahren" link="https://google.com">
+          </ContactForm>
+        </div>
+        
       </div>
       <footer>
 
