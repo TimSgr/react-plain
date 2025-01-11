@@ -1,9 +1,22 @@
+"use client";
 //import Image from "next/image";
 import Link from 'next/link'
 import PrimaryButton from '../components/primaryButton';
 import SecondaryButton from '../components/secondaryButton';
 import SendButton from '../components/sendButton';
 import ContactForm from '../components/contactForm';
+
+
+function search(formData: FormData) {
+  const entries = Array.from(formData.entries()); // Formulardaten in ein Array konvertieren
+  console.log("Form data submitted:", entries);
+  alert(
+      `Formular gesendet: ${entries
+          .map(([key, value]) => `${key}: ${value}`)
+          .join(", ")}`
+  );
+}
+const fields = ["Vorname", "Nachname", "E-Mail", "Telefon"];
 
 export default function Home() {
   return (
@@ -57,11 +70,11 @@ export default function Home() {
           </SecondaryButton>
         </div>
         <div className='flex w-full justify-center bg-lightblue'>
-          <SendButton text="Mehr erfahren" link="https://google.com">
+          <SendButton text="Mehr erfahren">
           </SendButton>
         </div>
         <div className='flex py-8 w-full justify-center bg-lightblue'>
-          <ContactForm text="Mehr erfahren" link="https://google.com">
+          <ContactForm inputfields={fields} onSubmit={search}>
           </ContactForm>
         </div>
         

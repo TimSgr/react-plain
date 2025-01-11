@@ -26,6 +26,9 @@ export default {
         newtext: "#F6F8FD",
         newtext2: "#EDF0FB",
       },  
+      translate: {
+        'ease': '-2rem',
+      }
     },
   },
   "compilerOptions": {
