@@ -16,7 +16,7 @@ function search(formData: FormData) {
           .join(", ")}`
   );
 }
-const fields = ["Vorname", "Nachname", "E-Mail", "Telefon"];
+const fields = ["Vorname", "Nachname", "E-Mail", "Nachricht"];
 
 export default function Home() {
   return (
