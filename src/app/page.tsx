@@ -5,6 +5,7 @@ import PrimaryButton from '../components/primaryButton';
 import SecondaryButton from '../components/secondaryButton';
 import SendButton from '../components/sendButton';
 import ContactForm from '../components/contactForm';
+import SimpleCarousel from '../components/simpleCarousel';
 
 
 function search(formData: FormData) {
@@ -17,6 +18,8 @@ function search(formData: FormData) {
   );
 }
 const fields = ["Vorname", "Nachname", "E-Mail", "Nachricht"];
+
+const images = ["next.svg", "sixt-logo.svg", "window.svg", "sixt-logo.svg", "file.svg", "globe.svg"];
 
 export default function Home() {
   return (
@@ -78,6 +81,7 @@ export default function Home() {
           </ContactForm>
         </div>
         
+        <SimpleCarousel images={images}/>
       </div>
       <footer>
 

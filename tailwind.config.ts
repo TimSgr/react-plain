@@ -28,6 +28,7 @@ export default {
       },  
       translate: {
         'ease': '-2rem',
+        '200': '200%',
       }
     },
   },
