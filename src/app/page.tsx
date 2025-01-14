@@ -6,6 +6,7 @@ import SecondaryButton from '../components/secondaryButton';
 import SendButton from '../components/sendButton';
 import ContactForm from '../components/contactForm';
 import SimpleCarousel from '../components/simpleCarousel';
+import SimpleCalendar from '@/components/calendar';
 
 
 function search(formData: FormData) {
@@ -82,6 +83,9 @@ export default function Home() {
         </div>
         
         <SimpleCarousel images={images}/>
+
+
+        <SimpleCalendar />
       </div>
       <footer>
 
