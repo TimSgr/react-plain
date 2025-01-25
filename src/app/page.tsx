@@ -41,6 +41,11 @@ export default function Home() {
                 Test2
               </li>
             </Link>
+            <Link href="/tierheim">
+            <li>
+                Test3
+              </li>
+            </Link>
           </ul>
         </div>
         <div>
@@ -84,8 +89,6 @@ export default function Home() {
         
         <SimpleCarousel images={images}/>
 
-
-        <SimpleCalendar />
       </div>
       <footer>
 

@@ -25,6 +25,10 @@ export default {
         lightblue: "#9AC2F6", 
         newtext: "#F6F8FD",
         newtext2: "#EDF0FB",
+        tierheimText: "#009034",
+        tierheimMenuBg: "#00481A",
+        paulaidee: "#CEDCB2",
+        paulaundjasminidee: "#00240D",
       },  
       translate: {
         'ease': '-2rem',
