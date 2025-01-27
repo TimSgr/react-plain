@@ -26,7 +26,7 @@ function ContactForm({ inputfields, onSubmit }: ContactFormProps) {
         }
     };
 
-    const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleInput = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = event.target;
         const error = validateField(name, value);
         setErrors((prev) => ({ ...prev, [name]: error }));
@@ -62,29 +62,45 @@ function ContactForm({ inputfields, onSubmit }: ContactFormProps) {
         >
             {inputfields.map((field, index) => {
                 const name = field.toLowerCase();
+                const isTextarea = name === "nachricht";
+
                 return (
                     <div key={index} className="relative h-12 group cursor-text">
-                        <input
-                            type={
-                                name === "telefon"
-                                    ? "tel"
-                                    : name === "e-mail"
-                                    ? "email"
-                                    : name === "nachricht"
-                                    ? "textarea"
-                                    : "text"
-                            }
-                            id={name}
-                            name={name}
-                            placeholder=" "
-                            className={`peer relative h-full w-full px-2 pt-3 pb-1 border ${
-                                errors[name]
-                                    ? "border-red-500 focus:ring-red-500"
-                                    : "border-gray-400 focus:ring-blue-500"
-                            }`}
-                            onInput={handleInput}
-                            onBlur={handleInput}
-                        />
+                        {isTextarea ? (
+                            <textarea
+                                rows={4}
+                                id={name}
+                                name={name}
+                                placeholder=" "
+                                className={`peer relative h-full w-full px-2 pt-3 pb-1 border ${
+                                    errors[name]
+                                        ? "border-red-500 focus:ring-red-500"
+                                        : "border-gray-400 focus:ring-blue-500"
+                                }`}
+                                onInput={(e) => handleInput(e as React.ChangeEvent<HTMLTextAreaElement>)}
+                                onBlur={(e) => handleInput(e as React.ChangeEvent<HTMLTextAreaElement>)}
+                            />
+                        ) : (
+                            <input
+                                type={
+                                    name === "telefon"
+                                        ? "tel"
+                                        : name === "e-mail"
+                                        ? "email"
+                                        : "text"
+                                }
+                                id={name}
+                                name={name}
+                                placeholder=" "
+                                className={`peer relative h-full w-full px-2 pt-3 pb-1 border ${
+                                    errors[name]
+                                        ? "border-red-500 focus:ring-red-500"
+                                        : "border-gray-400 focus:ring-blue-500"
+                                }`}
+                                onInput={(e) => handleInput(e as React.ChangeEvent<HTMLInputElement>)}
+                                onBlur={(e) => handleInput(e as React.ChangeEvent<HTMLInputElement>)}
+                            />
+                        )}
                         <label
                             htmlFor={name}
                             className="absolute left-2 top-1/4 transform text-gray-500 transition-all duration-200 peer-placeholder-shown:top-1/6 peer-placeholder-shown:text-gray-500 peer-placeholder-shown:translate-y-1/6 peer-focus:top-0 peer-focus:text-blue-500 peer-focus:translate-y-0 cursor-text"

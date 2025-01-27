@@ -20,7 +20,7 @@ function SimpleCarousel({ images }: SliderProps) {
     }, []);
     return (
         <div 
-            className="slider_carousel"
+            className="slider_carousel pointer-events-none"
             style={{ "--track-width": `${trackWidth}px` } as React.CSSProperties}
         >
             <div className="slider_part" ref={sliderRef}>

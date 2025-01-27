@@ -6,8 +6,7 @@ import SecondaryButton from '../components/secondaryButton';
 import SendButton from '../components/sendButton';
 import ContactForm from '../components/contactForm';
 import SimpleCarousel from '../components/simpleCarousel';
-import SimpleCalendar from '@/components/calendar';
-
+import NavigationBar from '@/components/navigationBar';
 
 function search(formData: FormData) {
   const entries = Array.from(formData.entries()); // Formulardaten in ein Array konvertieren
@@ -87,8 +86,14 @@ export default function Home() {
           </ContactForm>
         </div>
         
-        <SimpleCarousel images={images}/>
-
+        <NavigationBar
+          items={[
+              { text: "Home", href: "/", icon: undefined },
+              { text: "About", href: "/about", icon: undefined },
+              { text: "Contact", href: "/contact", icon: undefined },
+          ]}
+          position="top-0 left-0"
+        />
       </div>
       <footer>
 
